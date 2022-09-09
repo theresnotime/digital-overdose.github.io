@@ -18,7 +18,7 @@ jobs:
         experimental: [false]
         include:
           - version: [16.x, 18.x]
-            experimental: [true]
+            experimental: true
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
