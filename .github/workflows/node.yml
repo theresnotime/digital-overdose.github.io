@@ -14,11 +14,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: [14.x, 16.x]
+        node-version: [14.16.1, 14.16.0]
         experimental: [false]
         include:
-          - version: 18.x
-            experimental: true
+          - version: [16.x, 18.x]
+            experimental: [true]
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
